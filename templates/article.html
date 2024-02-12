@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Article title</title>
+{% endblock %}
+
+
+{% block body %}
+
+<div class="columns is-multiline is-mobile">
+
+    <!-- Article -->
+    <div class="column is-8">
+
+        <div class="card">
+            <div class="card-content">
+                <div class="content is-medium">
+                    <h3>{{ article.title }}</h1>
+                    {{ article.body }}
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- \Article -->
+
+
+    <div class="column is-4">
+
+        {% include '/etc/small_search.html' %}
+
+        <!-- share -->
+        <div class="card">
+            <div class="card-content">
+              <div class="content">
+                {{ article.title }}
+              </div>
+            </div>
+            <footer class="card-footer">
+              <a href="#" class="card-footer-item">♠</a>
+              <a href="#" class="card-footer-item">♠</a>
+              <a href="#" class="card-footer-item">♠</a>
+              <a href="#" class="card-footer-item">♠</a>
+              <a href="#" class="card-footer-item">♠</a>
+            </footer>
+        </div>
+        <!-- \share -->
+
+        <!-- related articles list -->
+        <nav class="panel">
+            <p class="panel-heading">
+                Related articles
+            </p>
+            <a class="panel-block is-active">
+              <span class="panel-icon">
+                <i class="fas fa-book" aria-hidden="true"></i>
+              </span>
+              bulma
+            </a>
+            <a class="panel-block">
+              <span class="panel-icon">
+                <i class="fas fa-book" aria-hidden="true"></i>
+              </span>
+              marksheet
+            </a>
+            <a class="panel-block">
+              <span class="panel-icon">
+                <i class="fas fa-book" aria-hidden="true"></i>
+              </span>
+              minireset.css
+            </a>
+            <a class="panel-block">
+              <span class="panel-icon">
+                <i class="fas fa-book" aria-hidden="true"></i>
+              </span>
+              jgthms.github.io
+            </a>
+        </nav>
+        <!-- /related articles list-->
+
+
+    </div>
+</div>
+
+<hr>
+
+<div class="columns is-multiline is-mobile">
+    <div class="tile is-ancestor">
+        <div class="tile is-parent">
+            <article class="tile is-child box">
+            <p class="title">Side column</p>
+            <p class="subtitle">With some content</p>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+            </div>
+            </article>
+        </div>
+        <div class="tile is-parent is-8">
+            <article class="tile is-child box">
+            <p class="title">Main column</p>
+            <p class="subtitle">With some content</p>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+            </div>
+            </article>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<!-- Related Article -->
+<div class="columns is-multiline is-mobile">
+    <div class="column is-4">
+        <div class="card">
+            <div class="card-content">
+                <div class="content is-small">
+                    <h3>Related article</h1>
+                    Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column is-4">
+        <div class="card">
+            <div class="card-content">
+                <div class="content is-small">
+                    <h3>Related article</h1>
+                    Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column is-4">
+        <div class="card">
+            <div class="card-content">
+                <div class="content is-small">
+                    <h3>Related article</h1>
+                    Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Related Article -->
+
+
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Articles list</title>
+{% endblock %}
+
+
+{% block body %}
+
+<div class="columns is-multiline is-mobile">
+
+    <div class="column is-8">
+
+        <div class="card">
+            <div class="card-content">
+                <div class="content is-medium">
+                    <h6>Search results</h6>
+                </div>
+            </div>
+        </div>
+
+        {% for article in search_query_result %}
+        <!-- Article -->
+        <div class="card">
+            <div class="card-content">
+                <div class="content is-medium">
+                    <h3>{{ article.title }}</h3>
+                    <a href="/article/{{ article.slug }}" class="button is-link is-light">Read</a>
+                </div>
+            </div>
+        </div>
+        <!-- \Article -->
+        {% endfor %}
+
+    </div>
+
+
+    <div class="column is-4">
+        {% include '/etc/small_search.html' %}
+    </div>
+    
+</div>
+
+
+
+
+{% endblock %}

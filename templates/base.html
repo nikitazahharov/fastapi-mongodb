@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', path='/css/bulma.min.css') }}">
+
+        <!-- head -->
+        {% block head %}
+        <title>ArticleX</title>
+        {% endblock %}
+        <!-- \head -->
+
+    </head>
+
+    <body>
+
+        <!-- header -->
+        <div class="container">
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="/">
+                        <img src="{{ url_for('static', path='/custom/logo.png') }}" width="112" height="28">
+                    </a>
+            
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+            
+                <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-start">
+                        <a href="/" class="navbar-item">Home</a>    
+                        <a href="/list/article/" class="navbar-item">List of articles</a>     
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link">More</a>
+            
+                            <div class="navbar-dropdown">
+                                <a class="navbar-item">About</a>
+                                <a class="navbar-item">Jobs</a>
+                                <a class="navbar-item">Contact</a>
+                                <hr class="navbar-divider">
+                                <a class="navbar-item">Report an issue</a>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </nav>
+        </div>
+        <!-- /header -->
+
+        <!-- body -->
+        <div class="container">
+        {% block body %}
+        {% endblock %}
+        </div>
+        <!-- /body -->
+
+
+        <!-- footer -->
+        
+        <br>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="content has-text-centered">
+                    <p><strong>Footer</strong></p>
+                    <p>© 2023 - website developed by <a href="">nikson</a></p>
+                </div>
+            </div>
+        </footer>
+        <!-- /footer -->
+
+
+    </body>
+
+</html>
